@@ -45,6 +45,34 @@
 
 #Atividade 2
 
+class Conta:
+  contas = []
+
+  def __init__(self, titular,saldo):
+        self.titular = titular.title()
+        self.saldo = saldo.upper()
+        Conta.contas.append(self)
+
+  def __str__(self):
+         return f"{self.titular} | {self.saldo}"
+
+
+  @classmethod
+  def listar_conta(cls):
+        print(f"{'Nome do titular'.ljust(20)} | {'Saldo'.ljust(20)} ") 
+        for conta in cls.contas:
+                titular_justificado = conta.titular.ljust(20)
+                saldo_justificada = conta.saldo.ljust(20)
+        print(f"{titular_justificado} | {saldo_justificada} ")
+
+
+conta_1 = Conta('Carlos','200,00' )
+conta_2 = Conta('Cristiano','160,00' )
+
+
+Conta.listar_conta()
+
+
 
    
 
