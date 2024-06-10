@@ -1,4 +1,4 @@
-]# #Atividade 1# #Atividade 1
+# #Atividade 1# #Atividade 1
 # class Pessoa:
 #     pessoas = []
 
